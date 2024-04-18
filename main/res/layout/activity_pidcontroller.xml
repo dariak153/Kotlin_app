@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".PIDControllerActivity">
+    <TextView
+        android:id="@+id/textInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="Kontroler PID, regulujący grzałkę w czajnku elektrycznym, aby woda osiągnęła założoną temperaturę."
+        android:layout_centerHorizontal="true"
+        android:paddingTop="16dp"/>
+
+    <TextView
+        android:id="@+id/textInfo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_below="@+id/textInfo"
+        android:text="Wybierz docelową temperaturę wody"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="16dp"/>
+
+    <SeekBar
+        android:layout_below="@+id/textInfo2"
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="30" />
+
+    <TextView
+        android:id="@+id/currentTemperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seekBar"
+        android:textSize="22sp"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="16dp"/>
+
+</RelativeLayout>
